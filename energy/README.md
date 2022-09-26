@@ -1,8 +1,8 @@
 # North Sea Energy
 
 This sub-repo consists of:
-1. Gas and Oil Extraction
-2. Renewable Energy
+1. [Gas and Oil Extraction](https://github.com/ftmnl/north_sea/tree/main/energy/fossil_fuels).
+2. [Renewable Energy](https://github.com/ftmnl/north_sea/tree/main/energy/renewables)
 
 ## Data
 
