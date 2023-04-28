@@ -7,23 +7,16 @@ RUN conda install -q \
 	gdal \
 	requests \
 	geopy \
-	sqlalchemy \
 	numpy \
 	matplotlib \
 	owslib \
 	geoalchemy2 \
 	hvplot \
 	pyproj \
-	bokeh \
 	cartopy \
-	cython \
 	geoviews \
 	panel \
-	movingpandas \
-	seaborn \
-	jupyterlab \
-	jupyterlab-git
-
+	movingpandas
 
 RUN pip install python-dotenv ogr
 
