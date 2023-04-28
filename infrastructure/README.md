@@ -1,19 +1,38 @@
 # Infrastructure
 
-## Electricity grid North Sea
+## Goal
 
-### Goal
+Import, load, clean and analyse data on infrastructure in the North Sea (EEZs).
 
-To assess the difficulties in building an integrated North Sea electricty grid. 
+## Run
 
-### Steps
+The easiest way to use this code is with Docker. From the parent directory run:
 
-1. Map the current electricity grid infrastructure in the North Sea from several countries (UK, NL, NO, DK, DE, BE, FR, IS).
-2. Enrich data with ownership and technical information
-3. Map several projections and scenarios
+```
+docker compose up -d
+```
 
+You can access the jupyter notebooks from localhost:8888/lab.
 
-### Data
+Change the ```.env``` and ```config``` files to your liking.
+
+## Steps
+
+1. Automate imports, store the raw data in an online PostgreSQL/PostGIS.
+2. I have chosen to clean the data while importing it. There is some time loss, but the original records are always available. 
+3. Check data quality with EDA process
+4. Create several analysis notebooks
+
+## TODO
+
+- Refactor all code
+- Move code to the parent directory as much as possible for reusability
+- Create online PostgreSQL/PostGIS instance
+- Automate import with Argo (Aleph Memorious) or directly in Google Cloud.
+- Setup EDA process
+- Clean analysis notebooks
+
+## Data
 
 The data is available in a PostgreSQL instance. Currently the instance is run locally, but will move online soon.
 
