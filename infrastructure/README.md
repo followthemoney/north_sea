@@ -25,11 +25,12 @@ Change the ```.env``` and ```config``` files to your liking.
 
 ## TODO
 
-- Refactor all code
+- Preferably I use some ArcGIS data sources, but the [arcgis python api](https://developers.arcgis.com/python/) has trouble running on MacOS silicon. For now I use alternative sources, but in the future I want to change this.
+- Refactor all code: create a proper module suitable for all North Sea projects.
 - Move code to the parent directory as much as possible for reusability
 - Create online PostgreSQL/PostGIS instance
 - Automate import with Argo (Aleph Memorious) or directly in Google Cloud.
-- Setup EDA process
+- Setup EDA process ([example for movement data](https://github.com/anitagraser/EDA-protocol-movement-data))
 - Clean analysis notebooks
 
 ## Data
