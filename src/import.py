@@ -13,8 +13,8 @@ import fiona
 import shutil
 import yaml
 
-from north_sea.src.utils import check_countries
-import north_sea.src.geo_utils as geo
+from src.utils import check_countries
+import src.geo_utils as geo
 
 # Set some environment variables
 load_dotenv('.env')
@@ -91,7 +91,7 @@ def download_zipfiles(countries):
                 gdf = gpd.read_file(file)
                 gdf = gdf[~gdf.geometry.isna()]
                 
-                export_to_geopackage(gdf, country, name)
+                geo.export_to_geopackage(gdf, country, name)
         
         
 
@@ -111,19 +111,19 @@ def download_wfs(countries):
             url = wfs_dict.get(_country)
             
             for name, layer in zip(names, emod_layers):
-                gdf = wfs2gdf(select_wfs_layer(url, layer), url, 'json')
+                gdf = geo.wfs2gdf(geo.select_wfs_layer(url, layer), url, 'json')
                 gdf = gdf[gdf.country == country_dict.get(country)]
                 
-                export_to_geopackage(gdf, country, name)
+                geo.export_to_geopackage(gdf, country, name)
         
         elif country == 'nl':
             pipes_url = wfs_dict.get('nl') # change config
-            gdf = wfs2gdf(select_wfs_layer(pipes_url, 2), pipes_url, 'json')
-            export_to_geopackage(gdf, country, 'pipes')
+            gdf = geo.wfs2gdf(select_wfs_layer(pipes_url, 2), pipes_url, 'json')
+            geo.export_to_geopackage(gdf, country, 'pipes')
 
 
 
-def write_to_pg(countries):
+def write_to_postgres(countries):
     
     for country in check_countries(countries):
         path = f'../data/{country}/'
@@ -136,4 +136,4 @@ def write_to_pg(countries):
             
         layers = fiona.listlayers(file)
         for layer in layers:
-            export_to_postgres(file, layer, country, engine)
+            geo.export_to_postgres(file, layer, country, engine)
