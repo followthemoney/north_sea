@@ -20,6 +20,8 @@ RUN conda install -q \
 
 RUN pip install python-dotenv ogr
 
+ENV PYTHONPATH "${PYTHONPATH}:/home/jovyan/work"
+
 USER root
 
 RUN apt-get update && apt-get --yes install apt-utils 

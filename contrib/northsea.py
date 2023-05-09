@@ -40,7 +40,8 @@ def check_countries(countries):
 	Parameters
 	----------
 	countries : list
-	List of iso-2 country codes, use 'all' for all countries
+	List of iso-2 country codes, 
+	use 'all' for all countries
 	'''
 
 	if not isinstance(countries, list):

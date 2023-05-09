@@ -1,0 +1,8 @@
+arcgis/
+data/
+DS_Store
+DS_Store/
+docs/
+.env
+__pycache__/
+.ipynb_checkpoints/

@@ -12,13 +12,17 @@ The easiest way to use this code is with Docker. From the parent directory run:
 docker compose up -d
 ```
 
-You can access the jupyter notebooks from localhost:8888/lab.
+You can access the jupyter notebooks from localhost:8888/lab. If you run Postgres locally, you can find the localhost of your Postgres instance by running the following command in your terminal:
 
-Change the ```.env``` and ```config``` files to your liking.
+```
+ifconfig -a | grep inet
+```
+
+Change the ```.env```, ```sources.json``` and ```yaml``` files to your liking.
 
 ## Steps
 
-1. Automate imports, store the raw data in an online PostgreSQL/PostGIS.
+1. Automate imports, store the raw data in an online PostgreSQL/PostGIS. The scripts can be found in [src](../../src/). TODO: finish database creation script.
 2. I have chosen to clean the data while importing it. There is some time loss, but the original records are always available. 
 3. Check data quality with EDA process
 4. Create several analysis notebooks
@@ -35,7 +39,7 @@ Change the ```.env``` and ```config``` files to your liking.
 
 ## Data
 
-The data is available in a PostgreSQL instance. Currently the instance is run locally, but will move online soon.
+The data is available in a PostgreSQL/PostGIS instance. Currently the instance is run locally, but will move online soon.
 
 **Datasets for the UK**:
 
@@ -59,7 +63,7 @@ The data is available in a PostgreSQL instance. Currently the instance is run lo
 2. [EMODnet](https://www.emodnet-humanactivities.eu/view-data.php) (European Commission)
 
 **Datasets for Denmark**:
-1. There is [a dataset](https://geodata-info.dk/srv/dan/catalog.search#/metadata/44b34117-cf77-40ed-a099-6ec1a5e6bb75) on the North Sea Marine Spatial Plannings, but the data is rather course. It doesn't provide much information on features. There seem to be scant resources, which I find a bit strange, since Denmark has a high quality public data infrastructure. More information can [be found here](https://dma.dk/growth-and-framework-conditions/maritime-spatial-plan).
+1. There is [a dataset](https://geodata-info.dk/srv/dan/catalog.search#/metadata/44b34117-cf77-40ed-a099-6ec1a5e6bb75) on the North Sea Marine Spatial Plannings, but the data is rather coarse. It doesn't provide much information on features. There seem to be scant resources, which I find a bit strange, since Denmark has a high quality public data infrastructure. More information can [be found here](https://dma.dk/growth-and-framework-conditions/maritime-spatial-plan).
 
 2. [EMODnet](https://www.emodnet-humanactivities.eu/view-data.php) (European Commission)
 

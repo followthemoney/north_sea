@@ -1,0 +1,254 @@
+[
+  {
+    "name": "NLOG fields Netherlands - no geo",
+    "categories": ["energy"],
+    "tags": ["infrastructure", "fields", "gas", "oil"],
+    "countries": ["nl"],
+    "url": "https://www.nlog.nl/nlog-mapviewer/rest/field/fields",
+    "filetype": "json"
+  },
+  {
+    "name": "NLOG Oil & Gas licences - no geo",
+    "categories": ["energy"],
+    "tags": ["companies", "licences", "gas", "oil"],
+    "countries": ["nl"],
+    "url": "https://www.nlog.nl/nlog-mapviewer/rest/lic/overview",
+    "filetype": "json"
+  },
+  {
+    "name": "NLOG Oil & Gas wellbores - no geo",
+    "categories": ["energy"],
+    "tags": ["infrastructure", "wellbores", "gas", "oil"],
+    "countries": ["nl"],
+    "url": "https://www.nlog.nl/nlog-mapviewer/rest/brh/boreholes",
+    "filetype": "json"  
+  },
+  {
+    "name": "NLOG Oil & Gas wellbores - production",
+    "categories": ["energy"],
+    "tags": ["production", "wellbores", "gas", "oil"],
+    "countries": ["nl"],
+    "url": "https://www.nlog.nl/nlog-mapviewer/rest/prodfigures/well",
+    "filetype": "json"
+  },
+  {
+    "name": "NLOG Oil & Gas fields - production",
+    "categories": ["energy"],
+    "tags": ["production", "wellbores", "gas", "oil"],
+    "countries": ["nl"],
+    "url": "https://www.nlog.nl/nlog-mapviewer/rest/prodfigures/field",
+    "filetype": "json"
+  },
+  {
+    "name": "NLOG Oil & Gas licences - production",
+    "categories": ["energy"],
+    "tags": ["production", "wellbores", "gas", "oil"],
+    "countries": ["nl"],
+    "url": "https://www.nlog.nl/nlog-mapviewer/rest/prodfigures/licence",
+    "filetype": "json"
+  },
+  {
+    "name": "NLOG fields Netherlands",
+    "categories": ["energy"],
+    "tags": ["infrastructure", "fields", "gas", "oil"],
+    "countries": ["nl"],
+    "url": "https://www.nlog.nl/sites/default/files/{year}-{month_number}/{month_name}-{year}-nlog-fields_utm.zip",
+    "filetype": "zip",
+    "crs": "EPSG:28992"
+  },
+  {
+    "name": "NLOG Oil & Gas licences",
+    "categories": ["energy"],
+    "tags": ["companies", "licences", "gas", "oil"],
+    "countries": ["nl"],
+    "url": "https://www.nlog.nl/sites/default/files/{year}-{month_number}/{month_name}-{year}-nlog-licences_utm.zip",
+    "filetype": "zip",
+    "crs": "EPSG:28992"
+  },
+  {
+    "name": "NLOG Oil & Gas platforms",
+    "categories": ["energy"],
+    "tags": ["infrastructure", "platforms", "gas", "oil"],
+    "countries": ["nl"],
+    "url": "https://www.nlog.nl/sites/default/files/{year}-{month_number}/{month_name}-{year}-nlog-facility_utm.zip",
+    "filetype": "zip",
+    "crs": "EPSG:28992"
+  },
+  {
+    "name": "NLOG Oil & Gas wellbores",
+    "categories": ["energy"],
+    "tags": ["infrastructure", "wellbores", "gas", "oil"],
+    "countries": ["nl"],
+    "url": "https://www.nlog.nl/sites/default/files/{year}-{month_number}/{month_name}-{year}-nlog-boreholes_utm.zip",
+    "filetype": "zip",
+    "crs": "EPSG:28992"
+  },
+  {
+    "name": "NPD oil and gas production",
+    "categories": ["energy"],
+    "tags": ["production", "gas", "oil"],
+    "countries": ["no"],
+    "url": "https://factpages.npd.no/ReportServer_npdpublic?/FactPages/tableview/field_production_monthly&rs:Command=Render&rc:Toolbar=false&rc:Parameters=f&IpAddress=not_used&CultureCode=en&rs:Format=CSV&Top100=false",
+    "filetype": "csv",
+    "crs": "EPSG:4326"
+  },
+  {
+    "name": "NSTA production data",
+    "categories": ["energy"],
+    "tags": ["production", "gas", "oil"],
+    "countries": ["uk"],
+    "url": "https://data.nstauthority.co.uk/arcgis/rest/services/Public_ED50/UKCS_Daily_Production_Data_ED50/FeatureServer",
+    "filetype": "wfs",
+    "crs": "EPSG:4326"
+
+  },
+ {
+    "name": "NO NPD Fact Maps",
+    "categories": ["energy"],
+    "tags": ["infrastructure", "boundaries", "companies", "gas", "oil"],
+    "countries": ["no"],
+    "url": "https://factpages.npd.no/downloads/fgdb/NPD_FactMapsData_v3_0.zip",
+    "filetype": "zip",
+    "crs": "EPSG:23032"
+  },
+  {
+    "name": "UK offshore open data",
+    "categories": ["energy"],
+    "tags": ["infrastructure", "boundaries", "companies", "gas", "oil"],
+    "countries": ["uk"],
+    "url": "https://datanstauthority.blob.core.windows.net/external/OpenDataZips/UKCS_OFF_WGS84.zip",
+    "filetype": "zip",
+    "crs": "EPSG:4326"
+  },
+  {
+    "name": "UK CCS licences",
+    "categories": ["energy"],
+    "tags": ["ccs", "gas", "oil"],
+    "countries": ["uk"],
+    "url": "https://data.nstauthority.co.uk/arcgis/rest/services/Public_WGS84/UKCS_CarbonStorage_Licences_WGS84/FeatureServer",
+    "filetype": "wfs",
+    "crs": "EPSG:4326"
+  },
+  {
+    "name": "VLIZ Belgium",
+    "categories": ["energy"],
+    "tags": ["infrastructure", "pipelines", "cables", "boundaries"],
+    "countries": ["be"],
+    "url": "https://geo.vliz.be/geoserver/ows?service=WFS&acceptversions=2.0.0&request=GetCapabilities",
+    "filetype": "wfs",
+    "crs": "EPSG:4326"
+  },
+  {
+    "name": "Geospatial portal Germany",
+    "categories": ["energy"],
+    "tags": ["infrastructure", "pipelines", "platforms", "fields", "gas", "oil"],
+    "countries": ["de"],
+    "url": "https://www.geoseaportal.de/inspire/services/PF_INSPIRE_DS?SERVICE=WFS&REQUEST=GetCapabilities&VERSION=2.0.0",
+    "filetype": "wfs",
+    "crs": "EPSG:4326"
+  },
+  {
+    "name": "EMODnet human activities",
+    "categories": ["energy", "environment","fishing", "mining", "policy"],
+    "tags": ["boundaries", "companies", "fields", "gas", "infrastructure", "oil", "pipelines", "platforms", "wellbores"],
+    "countries": ["be", "de", "dk", "nl", "no", "uk"],
+    "url": "https://ows.emodnet-humanactivities.eu/wfs?SERVICE%3DWFS&REQUEST%3DGetCapabilities&VERSION=2.0.0",
+    "filetype": "wfs",
+    "crs": "EPSG:4326" 
+  },
+  {
+    "name": "Norway NPD Fact Maps",
+    "categories": ["energy"],
+    "tags": ["boundaries","companies", "fields", "gas", "infrastructure", "oil", "pipelines", "platforms", "wellbores"],
+    "countries": ["no"],
+    "url": "https://factmaps.npd.no/arcgis/services/FactMaps_ogc/3_0_WGS84_z32/MapServer/WFSServer?",
+    "filetype": "wfs",
+    "crs": "EPSG:4326"
+  },
+  {
+    "name": "NLOG Fields wfs",
+    "categories": ["energy"],
+    "tags": ["boundaries", "fields", "gas", "oil"],
+    "countries": ["nl"],
+    "url": "https://www.nlog.nl/arcgis/services/NLOG_WFS/gdw_ng_wfs_field_utm/MapServer/WFSServer?",
+    "filetype": "wfs",
+    "crs": "EPSG:28992"
+  },
+  {
+    "name": "NLOG Licences wfs",
+    "categories": ["energy"],
+    "tags": ["boundaries", "companies", "licences", "gas", "oil"],
+    "countries": ["nl"],
+    "url": "https://www.nlog.nl/arcgis/services/NLOG_WFS/gdw_ng_wfs_licence_utm/MapServer/WFSServer?",
+    "filetype": "wfs",
+    "crs": "EPSG:28992"
+  },
+  {
+    "name": "NLOG Pipes wfs",
+    "categories": ["energy"],
+    "tags": ["boundaries", "companies", "gas", "oil", "pipelines"],
+    "countries": ["nl"],
+    "url": "https://geo.rijkswaterstaat.nl/services/ogc/gdr/kabels_en_leidingen_noordzee/ows?",
+    "filetype": "wfs",
+    "crs": "EPSG:28992"
+  },
+  {
+    "name": "NLOG Wellbores wfs",
+    "categories": ["energy"],
+    "tags": ["boundaries", "gas", "oil", "wellbores"],
+    "countries": ["nl"],
+    "url": "https://www.nlog.nl/arcgis/services/NLOG_WFS/gdw_ng_wfs_wll_utm/MapServer/WFSServer?",
+    "filetype": "wfs",
+    "crs": "EPSG:28992"
+  },
+  {
+    "name": "NSTA offshore fields",
+    "categories": ["energy"],
+    "tags": ["boundaries", "fields", "gas", "oil"],
+    "countries": ["uk"],
+    "url": "https://data.nstauthority.co.uk/arcgis/rest/services/Public_WGS84/UKCS_Offshore_Fields_WGS84/FeatureServer",
+    "filetype": "wfs",
+    "crs": "EPSG:4326"
+  },
+  {
+    "name": "NSTA offshore infrastructure",
+    "categories": ["energy"],
+    "tags": ["gas", "infrastructure", "oil"],
+    "countries": ["uk"],
+    "url": "https://data.nstauthority.co.uk/arcgis/rest/services/Public_WGS84/UKCS_Offshore_Infrastructure_WGS84/FeatureServer",
+    "filetype": "wfs",
+    "crs": "EPSG:4326"
+  },
+  {
+    "name": "NSTA offshore licences",
+    "categories": ["energy"],
+    "tags": ["companies", "gas", "licences", "oil"],
+    "countries": ["uk"],
+    "url": "https://data.nstauthority.co.uk/arcgis/rest/services/Public_WGS84/UKCS_Licences_WGS84/FeatureServer",
+    "filetype": "wfs",
+    "crs": "EPSG:4326"
+  },
+  {
+    "name": "NSTA offshore licences history",
+    "categories": ["energy"],
+    "tags": ["companies", "gas", "history", "licences", "oil"],
+    "countries": ["uk"],
+    "url": "https://data.nstauthority.co.uk/arcgis/rest/services/Public_WGS84/UKCS_Licensed_Blocks_History_WGS84/FeatureServer",
+    "filetype": "wfs",
+    "crs": "EPSG:4326"
+  },
+  {
+    "name": "NSTA offshore wellbores",
+    "categories": ["energy"],
+    "tags": ["gas", "oil", "wellbores"],
+    "countries": ["uk"],
+    "url": "https://data.nstauthority.co.uk/arcgis/rest/services/Public_WGS84/UKCS_Wells_WGS84/FeatureServer",
+    "filetype": "wfs",
+    "crs": "EPSG:4326"
+  }
+
+]
+
+
+    
+  
