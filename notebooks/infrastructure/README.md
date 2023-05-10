@@ -12,13 +12,25 @@ The easiest way to use this code is with Docker. From the parent directory run:
 docker compose up -d
 ```
 
-You can access the jupyter notebooks from localhost:8888/lab. If you run Postgres locally, you can find the localhost of your Postgres instance by running the following command in your terminal:
+You can access the jupyter notebooks from localhost:8888/lab.
+
+Change the ```.env```, ```sources.json``` and ```yaml``` files to your liking.
+
+The .env file should contain a link to your postgreSQL instance, for instance:
+
+```
+POSTGRES_DB = 'postgresql+psycopg2://postgres:postgres@110.90.120.74/test'
+```
+
+If you run PostgreSQL locally, you can find the localhost of your PostgreSQL instance by running the following command in your terminal:
 
 ```
 ifconfig -a | grep inet
 ```
 
-Change the ```.env```, ```sources.json``` and ```yaml``` files to your liking.
+Make sure you have created a database in PostgreSQL and activated the PostGIS extension.
+
+All database execution is done with SQLAlchemy, so it should be easy to adapt the code to use another SQL dialect, but PostgreSQL/PostGIS is advised for its advanced spatial capabilities. 
 
 ## Steps
 
@@ -30,12 +42,12 @@ Change the ```.env```, ```sources.json``` and ```yaml``` files to your liking.
 ## TODO
 
 - Preferably I use some ArcGIS data sources, but the [arcgis python api](https://developers.arcgis.com/python/) has trouble running on MacOS silicon. For now I use alternative sources, but in the future I want to change this.
-- Refactor all code: create a proper module suitable for all North Sea projects.
+- Refactor all code: create a proper module suitable for all North Sea projects, so generalise a lot of code.
 - Move code to the parent directory as much as possible for reusability
 - Create online PostgreSQL/PostGIS instance
 - Automate import with Argo (Aleph Memorious) or directly in Google Cloud.
 - Setup EDA process ([example for movement data](https://github.com/anitagraser/EDA-protocol-movement-data))
-- Clean analysis notebooks
+- Add more notebook examples
 
 ## Data
 
