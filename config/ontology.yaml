@@ -151,7 +151,7 @@ infra_values:
     Completed (Shut In): Not in use
     Plugged: Not in use
     Drilling: In use
-    P&A: Not in use
+    P&A: Removed
     PLUGGED: Not in use
     PRODUCING: In use
     CLOSED: Not in use
