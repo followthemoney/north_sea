@@ -6,7 +6,7 @@ Import, load, clean and analyse data on infrastructure in the North Sea (EEZs).
 
 ## Run
 
-The easiest way to use this code is with Docker. From the parent directory run:
+The easiest way to use this code is with Docker. Make sure you have installed Docker. From the parent directory run:
 
 ```
 docker compose up -d
@@ -19,7 +19,7 @@ Change the ```.env```, ```sources.json``` and ```yaml``` files to your liking.
 The .env file should contain a link to your postgreSQL instance, for instance:
 
 ```
-POSTGRES_DB = 'postgresql+psycopg2://postgres:postgres@110.90.120.74/test'
+POSTGRES_DB = 'postgresql+psycopg2://postgres:postgres@192.01.01.01/north_sea'
 ```
 
 If you run PostgreSQL locally, you can find the localhost of your PostgreSQL instance by running the following command in your terminal:
