@@ -30,11 +30,15 @@ ifconfig -a | grep inet
 
 Make sure you have created a database in PostgreSQL and activated the PostGIS extension.
 
-All database execution is done with SQLAlchemy, so it should be easy to adapt the code to use another SQL dialect, but PostgreSQL/PostGIS is advised for its advanced spatial capabilities. 
+All database execution is done with SQLAlchemy, so it should be easy to adapt the code to use another SQL dialect, but PostgreSQL/PostGIS is advised for its advanced spatial capabilities.
+
+The sources.json file contains information on data sources, with links to wfs, zipfiles and REST services with some metadata on the sources, like coordinate reference systems of spatial data.
+
+The ontology.yaml file contains all choices we made in normalising the data. This is always an imperfect excercise, with many trade-offs. So make sure you are familiar with this file. 
 
 ## Steps
 
-1. Automate imports, store the raw data in an online PostgreSQL/PostGIS. The scripts can be found in [src](../../src/). TODO: finish database creation script.
+1. Automate imports, store the raw data in an online PostgreSQL/PostGIS. The scripts can be found in [src](../../src/). 
 2. I have chosen to clean the data while importing it. There is some time loss, but the original records are always available. 
 3. Check data quality with EDA process
 4. Create several analysis notebooks
@@ -83,3 +87,20 @@ The data is available in a PostgreSQL/PostGIS instance. Currently the instance i
 1. There are some datasets available for Vlaanderen, with many download options. The main source is [Kustportaal](https://www.kustportaal.be/nl). 
 
 2. [EMODnet](https://www.emodnet-humanactivities.eu/view-data.php) (European Commission)
+
+
+## Limitations and data quality
+
+There are some important limitations for the data, most have to do with missing data and ontology:
+
+1. As becomes clear from the paragraph above, multiple data sources were used with different data, omissions, definitions - sometimes even within datasets. For instance the registration of status of wellbores in the Dutch dataset has changed since January 1st 2022, which makes a comparission between new and old data in this dataset problematic. Within the EMODnet dataset, platforms are defined differently depending on the country. For the UK a platform is called a platform, for other countries it might be called a facility or Condeep (in the case of Norway). We had to make many choices how to deal with these inconsistencies and usually erred on the side of caution. See all the relevant choices in [ontology.yaml](../../config/ontology.yaml).
+2. Data for the UK, Netherlands and Norway is much more recent and elaborate than data from Germany, Denmark and Belgium. We found 60 kilometers of pipelines for Denmark in the European registries, but there might be more that is just not reported. 
+3. The registries are not always up to date.
+4. The registries are not always correct. The status might have changed in reality, but is not updated in the registry. We encountered wellbores that haven't produced any oil or gas in over ten years, but are still registered as active. 
+5. For pipelines: the UK EEZ contains far more pipelines than other countries. This probably is largely due to the differences in types of registration. Where possible we used kilometers and not number of pipes, because the length is more telling in the end. 
+6. Wellbores cannot be removed and often the status is unknown. If a well is inactive it could be permanent or temporary. Only Norway makes a distinction in the registry between the two statusses. Also it's not clear if permanently plugged means that there are no obligations for the operators or licence holders.
+7. We've enriched company data (for operators and licence holders) with data from the national company registries and own research. Where possible we tried to find the mother company, but because of a high consolidation in the fossil fuel business, this data might be outdated soon. The used data reflects the situation of January 1st 2023. We cannot release this data yet, but will add it later on.
+8. In some cases we have decided not to use the WFS services for spatial data, but to download zipfiles at the source. It's our experience that the zipfiles contain more information than the WFS services provide. 
+9. If you want to download the data yourself, it's highly adviced to use a PostGIS instance, because of the spatial data and some spatial masking that is performed (EEZs vs North Sea boundaries for instance)
+10. The North Sea countries are in different jurisdictions (UK, Norway, EU, OSPAR). Be mindful of those differences when analysing the data. The UK has other requirements, for instance, when it comes to plugging wellbores, than Norway or the EU.
+11. A good resource for checking or acquiring data is [Mapstand](https://mapstand.com). 
