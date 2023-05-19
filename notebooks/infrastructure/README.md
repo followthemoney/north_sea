@@ -1,10 +1,20 @@
-# Infrastructure
+# North Sea infrastructure
 
-## Goal
+The notebooks in this repository is part of an investigation into the infrastructure in the North Sea by:
+1. NRK ([story](https://www.nrk.no/klima/xl/hver-plattform-i-nordsjoen-ma-ryddes-etter-nedstenging_-men-noen-blir-staende-i-havet-1.16404390))
+2. De Tijd ([story](https://multimedia.tijd.be/noordzee-afval))
+3. DeSmog 
+4. Follow the Money ([story - English](https://www.ftm.eu/articles/north-sea-clean-up-of-rotten-infrastructure-costs-billions-but-no-one-wants-to-pay?share=94b6RpOzWb6IdB%2BPfW%2FrT0VdiqRFrE5u4oUolg%2F2JtTzxewyRrQJRsjQz%2FmX%2BOg%3D%26utm_medium=social&utm_campaign=sharebuttonleden&utm_source=linkbutton)) | ([story - Dutch](https://www.ftm.nl/artikelen/noordzee-opruimen-infrastructuur-kost-miljarden-maar-niemand-wil-betalen?share=mTM7237jIoGsK9ZI9Y1RFHT3wt2h6MXf28rerUacQ1fdrhI%2BrpisHmtJbMzsjWM%3D%26utm_medium=social&utm_campaign=sharebuttonleden&utm_source=linkbutton))
+
+This investigation is part of a larger project on the future of the North Sea and the ongoing and intensifying battle for space.
+
+Below you will find the code used for the stories:
+
+## Goal of this project
 
 Import, load, clean and analyse data on infrastructure in the North Sea (EEZs).
 
-## Run
+## Run this project
 
 The easiest way to use this code is with Docker. Make sure you have installed Docker. From the parent directory run:
 
@@ -35,13 +45,6 @@ All database execution is done with SQLAlchemy, so it should be easy to adapt th
 The sources.json file contains information on data sources, with links to wfs, zipfiles and REST services with some metadata on the sources, like coordinate reference systems of spatial data.
 
 The ontology.yaml file contains all choices we made in normalising the data. This is always an imperfect excercise, with many trade-offs. So make sure you are familiar with this file. 
-
-## Steps
-
-1. Automate imports, store the raw data in an online PostgreSQL/PostGIS. The scripts can be found in [src](../../src/). 
-2. I have chosen to clean the data while importing it. There is some time loss, but the original records are always available. 
-3. Check data quality with EDA process
-4. Create several analysis notebooks
 
 ## TODO
 
