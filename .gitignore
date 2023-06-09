@@ -7,6 +7,9 @@ docs/
 __pycache__/
 .ipynb_checkpoints/
 !.gitignore
+
 !*/
+!data/
 !data/**
+!data/renewables/
 !data/renewables/**
