@@ -8,8 +8,8 @@ __pycache__/
 .ipynb_checkpoints/
 !.gitignore
 
-!*/
+
 !data/
-!data/**
+!data/*
 !data/renewables/
-!data/renewables/**
+!data/renewables/*
