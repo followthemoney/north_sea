@@ -246,8 +246,45 @@
     "filetype": "wfs",
     "crs": "EPSG:4326"
   }
-
+  {
+    "name": "EMODnet wind farms",
+    "categories": ["energy"],
+    "tags": ["wind energy", "renewables"],
+    "countries": ["be", "de", "dk", "nl", "no", "uk"],
+    "url": "https://emodnet.ec.europa.eu/geonetwork/emodnet/eng/catalog.search#/search?resultType=details&sortBy=sortDate&any=EMODnet%20Human%20Activities,%20Wind%20Farms&from=1&to=20",
+    "filetype": "shapefile",
+    "crs": "EPSG:4326"
+  }
+  {
+    "name": "Norwegian wind farms",
+    "categories": ["energy"],
+    "tags": ["wind energy", "renewables"],
+    "countries": ["no"],
+    "url": "https://nedlasting.nve.no/gis/",
+    "filetype": "geojson",
+    "crs": "EPSG:4326"
+  }
+  {
+    "name": "Wind Europe public data",
+    "categories": ["energy"],
+    "tags": ["wind energy", "renewables"],
+    "countries": ["be", "de", "dk", "nl", "no", "uk"],
+    "url": "https://windeurope.org/intelligence-platform/product/european-offshore-wind-farms-map-public/",
+    "filetype": "csv",
+    "crs": "None"
+  }
+  {
+    "name": "4COffshore",
+    "categories": ["energy"],
+    "tags": ["wind energy", "renewables"],
+    "countries": ["be", "de", "dk", "nl", "no", "uk"],
+    "url": "https://www.4coffshore.com/windfarms/",
+    "filetype": "csv",
+    "crs": "None"
+  }
 ]
+
+
 
 
     

@@ -1,6 +1,33 @@
 # Select and rename columns for each table in PostgreSQL
 
 infra_columns:
+
+  wind: 
+    country_filter: country
+    owners: owner
+    windfarm_capacity: power_mw
+    development_status: status
+    project_name: name
+    total_project_capacity: power_mw
+    to_show_turbine_manufacturer: turbine_manufacturer
+    commissioning_date: year
+    gis_latitude: latitude
+    gis_longitude: longitude
+    number_of_turbines: n_turbines
+    objektType: object_type
+    anleggsNr: plant_no
+    anleggNavn: name
+    eier: owner
+    stadium: phase
+    stadiumDato: phase_date
+    effekt_MW: power_mw
+    forventetProduksjon_Gwh: expected_production_GW
+    lokalisering: location
+    status: status
+    forsteIdriftDato: date_first_operation
+    utAvDriftDato: retirement_date
+    antallTurbiner: n_turbines
+    geometry: geometry
   
   infra:
     infra_cols_nl:
@@ -110,6 +137,23 @@ infra_columns:
       purpose: infra_type
 
 infra_values:
+
+  wind:
+    D: Operation
+    FJ: Removed
+    N: Cancelled
+    O: Rebuilt
+    P: Planned
+    P1: Planned Illustrated
+    P2: Planned Projected
+    U: Under construction
+    V: Adopted   
+    Melding stilt i bero: Notification on hold
+    Vedtak stadfestet av OED: Decision confirmed by OED
+    Vedtak om endring av vilkår/frister/ytelse: Decisions on changes to terms/deadlines/benefits
+    Konsesjon avslått: Licence denied
+    Konsesjon trukket: Licence withdrawn
+
   infra_status:
     In gebruik: In use
     Verwijderd: Removed

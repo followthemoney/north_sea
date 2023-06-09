@@ -6,3 +6,7 @@ docs/
 .env
 __pycache__/
 .ipynb_checkpoints/
+
+!data/
+!data/renewables/
+!data/renewables/*
