@@ -6,7 +6,7 @@ docs/
 .env
 __pycache__/
 .ipynb_checkpoints/
-
+!.gitignore
 !*/
 !data/**
 !data/renewables/**
