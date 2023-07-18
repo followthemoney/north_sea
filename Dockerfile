@@ -18,7 +18,7 @@ RUN conda install -q \
 	panel \
 	movingpandas
 
-RUN pip install python-dotenv ogr
+RUN pip install python-dotenv ogr missingno
 
 ENV PYTHONPATH "${PYTHONPATH}:/home/jovyan/work"
 
@@ -29,3 +29,6 @@ RUN apt-get update && apt-get --yes install apt-utils
 RUN apt-get --yes install curl
 
 RUN apt-get --yes install nano
+
+RUN DEBIAN_FRONTEND="noninteractive" apt-get install libmagickwand-dev --no-install-recommends -y
+
