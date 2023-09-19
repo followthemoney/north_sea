@@ -1,34 +1,13 @@
 version: "3"
 
 services:
-  datastore:
-    image: postgres:latest
-    volumes:
-      - postgres:/var/lib/postgresql/data
-    environment:
-      POSTGRES_USER: datastore
-      POSTGRES_PASSWORD: datastore
-
-  shell:
-    build: .
-    command: /bin/bash
-    environment:
-      DATASTORE_URI: postgresql://datastore:datastore@datastore/datastore
-    links:
-      - datastore
-    volumes:
-      - "./src:/src"
-    tmpfs:
-      - "/tmp" 
-  
   jupyter:
     build: .
     ports:
       - 8888:8888
     volumes:
       - "./:/home/jovyan/work/"
+      - "/Users/dt/dimitri.tokmetzis@ftm.nl - Google Drive/My Drive/Projecten/north_sea_data/:/home/jovyan/work/drive/"
     environment:
       JUPYTER_TOKEN: docker
 
-volumes:
-  postgres: {}
