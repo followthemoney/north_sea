@@ -11,7 +11,7 @@ import logging
 log = logging.getLogger(__name__)
 
 # Create SQL engine
-load_dotenv('.env')
+load_dotenv('../../.env')
 POSTGRES_DB = os.environ.get('POSTGRES_DB')
 engine = create_engine(POSTGRES_DB)
 
@@ -86,7 +86,7 @@ def wfs2gdf(layer, url, output_format, wfs_version="2.0.0"):
     return gdf
 
 
-def gdf_to_geopackage(gdf, country, layer, path):
+def gdf_to_geopackage(gdf, country, name, path):
     '''
     Parameters:
     -----------
@@ -106,7 +106,7 @@ def gdf_to_geopackage(gdf, country, layer, path):
         os.makedirs(path)
 
     if len(gdf) > 0:
-        gdf.to_file(f'{path}{country}_geopackage.gpkg', layer=layer, driver='GPKG')
+        gdf.to_file(f'{path}{country}_geopackage.gpkg', layer=name, driver='GPKG')
 
     return log.info(f'exported {country} -- {name} -- to: {path}')
 

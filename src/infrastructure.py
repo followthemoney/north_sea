@@ -11,6 +11,7 @@ from src.utils import check_countries
 
 load_dotenv('../../.env')
 os.environ['PROJ_LIB'] = '/opt/conda/share/proj'
+
 with open('../../config/ontology.yaml') as yaml_file:
     config = yaml.safe_load(yaml_file)
 
