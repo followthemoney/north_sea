@@ -3,7 +3,6 @@
 infra_columns:
 
   wind: 
-    country_filter: country
     owners: owner
     windfarm_capacity: power_mw
     development_status: status
